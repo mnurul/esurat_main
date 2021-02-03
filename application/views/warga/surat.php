@@ -57,7 +57,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Maksud / Keperluan</label>
-                                    <textarea class="form-control" id="maksud_keperluan" name="maksud_keperluan" rows="3"></textarea>
+                                    <select class="form-control" id="maksud_keperluan" name="maksud_keperluan">
+                                        <option value="ktp">KTP</option>
+                                        <option value="kk">KK</option>
+                                        <option value="skck">SKCK</option>
+                                        <option value="domisili">Domisili</option>
+                                        <option value="kelahiran">Kelahiran</option>
+                                        <option value="kematian">Kematian</option>
+                                        <option value="usaha">Usaha</option>
+                                        <option value="tidak mampu">Tidak Mampu</option>
+                                    </select>
                                     <input type="hidden" name="status_izin_rt" value="Belum disetujui">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-sm">Proses Sekarang</button>

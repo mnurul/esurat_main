@@ -15,8 +15,8 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h2 class="h4 text-gray-900 mb-4">Kelurahan MangunJaya</h2>
-                    <img src="<?php echo base_url() ?>assets/dist/img/logo_pemda.jpg">
+                    <h2 class="h4 text-gray-900 mb-2">Kelurahan Mangun Jaya</h2>
+                    <img class="mb-2" src="<?php echo base_url() ?>assets/dist/img/logo_pemda_r.jpg">
                   </div>
 
                   <?php echo $this->session->flashdata('pesan') ?>

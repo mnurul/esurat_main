@@ -83,10 +83,10 @@ class pageRT extends CI_Controller
 
         if ($this->M_surat_rt->update_surat($where, $data, 'tb_surat_masuk_rt')) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Update Surat Permohonan Success!!</div>');
-            redirect('pageRT/index');
+            redirect('pageRT/surat');
         } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Update surat permohonan Gagal!!</div>');
-            redirect('pageRT/index');
+            redirect('pageRT/surat');
         }
     }
 
@@ -106,7 +106,7 @@ class pageRT extends CI_Controller
         $this->M_surat_rt->hapus_surat($where, 'tb_surat_masuk_rt');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Delete surat permohonan Success!!</div>');
-        redirect('pageRT/index');
+        redirect('pageRT/surat');
     }
 
     public function dataPenduduk()

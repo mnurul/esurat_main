@@ -86,7 +86,7 @@ class pageWarga extends CI_Controller
 
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Surat anda berhasil diajukan, Silahkan Menunggu</div>');
-        redirect('pageWarga/index');
+        redirect('pageWarga/inputSurat');
     }
 
     public function profile()

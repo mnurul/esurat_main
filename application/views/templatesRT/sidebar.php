@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-primary elevation-4" style="background-color: #2F4F4F;">
     <!-- Brand Logo -->
-    <a href="<?php echo base_url('pageRt/index') ?>" class="brand-link ">
+    <a href="#" class="brand-link ">
         <img src="<?php echo base_url() ?>assets/dist/img/logoPemda1.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-8" style="opacity: .8">
         <span class="logo-md" style="font-size: 16px;"><b>Sistem Pengajuan Surat</span>
     </a>
@@ -13,6 +13,12 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+                <li class="nav-item has-treeview menu-open">
+                    <a class="nav-link active" href="<?php echo base_url('pageRT/index') ?>">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span class="menu-sidebar" style="font-size: 13px;">Profile Kelurahan<span>
+                    </a>
+                </li>
                 <li class="nav-item has-treeview menu-open">
                     <a class="nav-link active" href="<?php echo base_url('pageRT/surat') ?>">
                         <i class="nav-icon fas fa-mail-bulk"></i>
