@@ -125,10 +125,10 @@ class pageAparat extends CI_Controller
 
         if ($this->M_surat_aparat->update_surat($where, $data, 'tb_surat_masuk_rt')) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Update Surat Permohonan Success!!</div>');
-            redirect('pageAparat/index');
+            redirect('pageAparat/surat');
         } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Update surat permohonan Gagal!!</div>');
-            redirect('pageAparat/index');
+            redirect('pageAparat/surat');
         }
     }
 
@@ -149,7 +149,7 @@ class pageAparat extends CI_Controller
         $this->M_surat_aparat->hapus_surat($where, 'tb_surat_masuk_rt');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Delete surat permohonan Success!!</div>');
-        redirect('pageAparat/index');
+        redirect('pageAparat/surat');
     }
 
     public function rekapData()

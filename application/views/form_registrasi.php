@@ -16,7 +16,7 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Buat Akun Kelurahan</h1>
-                                        <img src="<?php echo base_url() ?>assets/dist/img/logo_pemda.jpg">
+                                        <img src="<?php echo base_url() ?>assets/dist/img/logo_pemda_r.jpg">
                                     </div>
 
                                     <form class="user" method="post" action="<?= base_url('auth/registration'); ?>" enctype="multipart/form-data">

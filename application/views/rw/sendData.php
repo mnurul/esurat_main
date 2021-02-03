@@ -22,6 +22,8 @@
 				<button type="submit" class="btn btn-primary btn-sm mt-3">Update</button>
 				<a href="<?php echo base_url('jasa/kurir/pesanan_t/') ?>" class="btn btn-danger btn-sm mt-3">Batal</a>
 			</form> -->
+			<?= $this->session->userdata('message'); ?>
+
 
 			<?= form_open_multipart('jasa/kurir/proses_update/' . $tb_surat['id_surat']); ?>
 			<div class="form-group">

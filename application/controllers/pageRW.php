@@ -94,10 +94,10 @@ class pageRW extends CI_Controller
 
         if ($this->M_surat_rt->update_surat($where, $data, 'tb_surat_masuk_rt')) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Update Surat Permohonan Success!!</div>');
-            redirect('pageRW/index');
+            redirect('pageRW/surat');
         } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Update surat permohonan Gagal!!</div>');
-            redirect('pageRW/index');
+            redirect('pageRW/surat');
         }
     }
 
@@ -118,7 +118,7 @@ class pageRW extends CI_Controller
         $this->M_surat_rt->hapus_surat($where, 'tb_surat_masuk_rt');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Delete surat permohonan Success!!</div>');
-        redirect('pageRW/index');
+        redirect('pageRW/surat');
     }
 
     public function dataPenduduk()
@@ -254,6 +254,7 @@ class pageRW extends CI_Controller
                 );
                 // $this->db->where('id_surat', $id_surat);
                 $this->db->insert('tb_file_rekap', $data);
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pengiriman File Data Rekap Berhasil</div>');
                 redirect('pageRW/sendData');
             } else {
                 echo $this->upload->display_errors();

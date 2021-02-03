@@ -83,10 +83,10 @@ class pageRT extends CI_Controller
 
         if ($this->M_surat_rt->update_surat($where, $data, 'tb_surat_masuk_rt')) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Update Surat Permohonan Success!!</div>');
-            redirect('pageRT/index');
+            redirect('pageRT/surat');
         } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Update surat permohonan Gagal!!</div>');
-            redirect('pageRT/index');
+            redirect('pageRT/surat');
         }
     }
 
@@ -106,7 +106,7 @@ class pageRT extends CI_Controller
         $this->M_surat_rt->hapus_surat($where, 'tb_surat_masuk_rt');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Delete surat permohonan Success!!</div>');
-        redirect('pageRT/index');
+        redirect('pageRT/surat');
     }
 
     public function dataPenduduk()
@@ -133,8 +133,6 @@ class pageRT extends CI_Controller
         $nikRt = $this->session->userdata('nik');
         $getRt = $this->session->userdata('rt');
 
-        // var_dump($getRt, $dataWarga->rt);
-        // die();
         if ($getRt == $dataWarga->rt) {
             $data = array(
                 'nik' => $nik,
@@ -144,10 +142,13 @@ class pageRT extends CI_Controller
                 'status_rumah' => $status_rumah,
                 'status_keluarga' => $status_keluarga,
             );
+            // var_dump($data);
+            // die();
             $this->M_surat_rt->tambah_rekap($data, 'tb_rekap_data');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Penambahan Data Rekap Berhasil</div>');
             redirect('pageRT/dataPenduduk');
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Update Data Rekap belum Berhasil</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Penambahan Data Rekap belum Berhasil</div>');
             redirect('pageRT/dataPenduduk');
         }
     }
@@ -185,6 +186,9 @@ class pageRT extends CI_Controller
             'status_rumah'      => $status_rumah,
             'status_keluarga'     => $status_keluarga,
         );
+
+        // var_dump($data);
+        // die();
 
         $where = array(
             'id_rekap_data' => $id_rekap_data
