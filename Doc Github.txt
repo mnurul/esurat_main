@@ -1,0 +1,226 @@
+git hub
+git
+
+Push repository
+1.git init -> inisialisasi git
+2.git add . (untuk semua file) atau namafile.ext -> meyimpan file 
+3.git commit -m "ketrangan" -> save file
+4.git remote add origin url.git
+5.git push origin master
+
+* git remote rm origin
+
+Update Repository
+1.git init
+2.git add .
+3.git commit -m "keterangan"
+4.git push origin master
+
+CLone repository
+1.git clone url
+2.cd nama folder
+3.npm install
+4.npm start
+
+git checkout -b namabranch
+
+2,3,5 selalu kalo ada perubahan
+
+//Kerja Tim
+
+Orang 1
+1.git clone url namafolder
+2.git checkout -b namamaster
+3.code .
+4.git add
+5.git commit -m "keterangan"
+6.git push origin branch
+
+
+orang 2
+1.git pull origin branch orang 1
+2.git push origin master
+
+
+//NodeJS
+npm init
+npm install --save express
+npm install -g nodemon
+nodemon (server)
+
+//node express
+npm install -g express -generator
+express node_express --view=ejs
+
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/tugasportofolio (master)
+$ node -v
+v10.15.1
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_js
+$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (node_js)
+version: (1.0.0)
+description: SImple Nodejs Web Application
+entry point: (index.js) server.js
+test command:
+git repository:
+keywords:
+author: mnurul
+license: (ISC)
+About to write to F:\Xampp\htdocs\majapahit\node_js\package.json:
+
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "SImple Nodejs Web Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mnurul",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_js
+$ npm install --save express
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN node_js@1.0.0 No repository field.
+
++ express@4.16.4
+added 48 packages from 36 contributors and audited 121 packages in 28.929s
+found 0 vulnerabilities
+
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_js
+$ node server.js
+Test
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_js
+$ npm install -g nodemon
+C:\Users\DIMS\AppData\Roaming\npm\nodemon -> C:\Users\DIMS\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js
+
+> nodemon@1.18.10 postinstall C:\Users\DIMS\AppData\Roaming\npm\node_modules\nodemon
+> node bin/postinstall || exit 0
+
+Love nodemon? You can now support the project via the open collective:
+ > https://opencollective.com/nodemon/donate
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules\nodemon\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ nodemon@1.18.10
+added 223 packages from 129 contributors in 140.477s
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_js
+$ nodemon
+[nodemon] 1.18.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node server.js`
+Test
+Test satu
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_js
+$ nodemon
+[nodemon] 1.18.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node server.js`
+Test
+Test satu
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit
+$ npm install -g express-generator
+C:\Users\DIMS\AppData\Roaming\npm\express -> C:\Users\DIMS\AppData\Roaming\npm\node_modules\express-generator\bin\express-cli.js
++ express-generator@4.16.0
+added 10 packages from 13 contributors in 6.995s
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit
+$ express
+
+  warning: the default view engine will not be jade in future releases
+  warning: use `--view=jade' or `--help' for additional options
+
+destination is not empty, continue? [y/N]
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit
+$ express node_express --view=ejs
+
+   create : node_express\
+   create : node_express\public\
+   create : node_express\public\javascripts\
+   create : node_express\public\images\
+   create : node_express\public\stylesheets\
+   create : node_express\public\stylesheets\style.css
+   create : node_express\routes\
+   create : node_express\routes\index.js
+   create : node_express\routes\users.js
+   create : node_express\views\
+   create : node_express\views\error.ejs
+   create : node_express\views\index.ejs
+   create : node_express\app.js
+   create : node_express\package.json
+   create : node_express\bin\
+   create : node_express\bin\www
+
+   change directory:
+     $ cd node_express
+
+   install dependencies:
+     $ npm install
+
+   run the app:
+     $ DEBUG=node-express:* npm start
+
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit
+$ cd node_express
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_express
+$ npm install
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 53 packages from 38 contributors and audited 141 packages in 22.075s
+found 0 vulnerabilities
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_express
+$ nodemon app.js
+[nodemon] 1.18.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node app.js`
+[nodemon] clean exit - waiting for changes before restart
+
+DIMS@DIMS-PC MINGW64 /f/Xampp/htdocs/majapahit/node_express
+$ nodemon
+[nodemon] 1.18.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node ./bin/www`
+GET / 200 48.702 ms - 207
+GET /stylesheets/style.css 200 8.620 ms - 111
+GET /favicon.ico 404 4.502 ms - 1083
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+GET / 200 69.975 ms - 238
+GET /stylesheets/style.css 304 4.168 ms - -
+GET / 200 3.431 ms - 247
+GET /stylesheets/style.css 304 0.878 ms - -
+GET / 304 3.781 ms - -
+GET /stylesheets/style.css 304 0.633 ms - -
+GET / 304 3.529 ms - -
+GET /stylesheets/style.css 304 0.749 ms - -
+

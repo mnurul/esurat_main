@@ -1,0 +1,11 @@
+.menu-sidebar{
+    font-size: 13px;
+}
+
+.title-sidebar:hover{
+color: red !important;
+}
+
+.option-condition{
+    display: none !important;
+}
