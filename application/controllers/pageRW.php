@@ -254,6 +254,7 @@ class pageRW extends CI_Controller
                 );
                 // $this->db->where('id_surat', $id_surat);
                 $this->db->insert('tb_file_rekap', $data);
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pengiriman File Data Rekap Berhasil</div>');
                 redirect('pageRW/sendData');
             } else {
                 echo $this->upload->display_errors();

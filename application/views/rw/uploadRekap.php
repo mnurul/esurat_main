@@ -17,6 +17,8 @@
                 </nav>
             </div>
             <div class="card-body">
+                <?= $this->session->userdata('message'); ?>
+
                 <div class="col-6">
                     <?= form_open_multipart('pageRW/prosesSend'); ?>
                     <div class="form-group">

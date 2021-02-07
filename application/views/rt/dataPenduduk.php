@@ -18,6 +18,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
+                    <?= $this->session->userdata('message'); ?>
                     <button class="btn btn-sm btn-primary mb-3 btn-small" data-toggle="modal" data-target="#tambah_warga"><i class="fas fa-plus fa-sm"></i> Tambah Data Rekap </button>
                     <!-- <a href="<?= base_url(); ?>pageRT/exportData" class="btn btn-sm btn-primary mb-3 btn-small" style="float: right;">Export Data</a> -->
                     <table class="table table-bordered table-hover">

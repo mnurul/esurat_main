@@ -118,4 +118,9 @@ class M_surat_rt extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+
+    public function edit_rekap($where, $table)
+    {
+        return $this->db->join('tb_warga', 'tb_warga.nik = tb_rekap_data.nik')->get_where($table, $where);
+    }
 }
